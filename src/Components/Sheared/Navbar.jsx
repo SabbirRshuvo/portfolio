@@ -1,61 +1,110 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaBars,
+  FaDownload,
   FaEnvelope,
   FaHome,
   FaInfoCircle,
+  FaMoon,
+  FaSun,
   FaTimes,
 } from "react-icons/fa";
-import { Link } from "react-router";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light"
+    );
+  }, [isDark]);
 
   const navLinks = (
     <>
       <li>
-        <Link to="/" className="flex items-center gap-1">
-          <FaHome />
-          Home
-        </Link>
+        <a href="#home">Home</a>
       </li>
       <li>
-        <Link to="/about" className="flex items-center gap-1">
-          <FaInfoCircle />
-          About
-        </Link>
+        <a href="#about">About</a>
       </li>
       <li>
-        <Link to="/contact" className="flex items-center gap-1">
-          <FaEnvelope />
-          Contact
-        </Link>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#education">Education</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-md px-4">
+    <div className="navbar bg-base-100 shadow-md fixed top-0 z-50 px-4">
+      {/* Logo */}
       <div className="navbar-start">
-        <Link to="/" className="text-xl font-bold text-primary">
-          SABBIR
-        </Link>
+        <a className="text-xl font-bold">Md Sabbir</a>
       </div>
 
+      {/* Center Links - Hidden on Small Screens */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 gap-2 font-medium ">
+          {navLinks}
+        </ul>
       </div>
 
-      <div className="navbar-end lg:hidden">
+      {/* Right Side - Button + Theme Toggle */}
+      <div className="navbar-end hidden md:flex items-center gap-3">
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="btn btn-ghost text-2xl"
+          onClick={() => setIsDark(!isDark)}
+          className="btn btn-ghost btn-sm text-xl"
         >
-          {menuOpen ? <FaTimes /> : <FaBars />}
+          {isDark ? <FaSun /> : <FaMoon />}
+        </button>
+        <a
+          href="/resume.pdf"
+          download
+          className="btn btn-primary btn-sm flex items-center gap-2"
+        >
+          <FaDownload /> Resume
+        </a>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden ml-auto">
+        <button
+          onClick={() => setOpen(!open)}
+          className="btn btn-ghost text-xl"
+        >
+          {open ? <FaTimes /> : <FaBars />}
         </button>
       </div>
-      {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-base-100 shadow-lg z-10 lg:hidden">
-          <ul className="menu menu-vertical px-4 py-2">{navLinks}</ul>
+
+      {/* Mobile Dropdown Menu */}
+      {open && (
+        <div className="absolute top-16 left-0 w-full bg-base-100 p-4 shadow-md lg:hidden z-40">
+          <ul className="menu menu-vertical space-y-2 font-medium w-full">
+            {navLinks}
+          </ul>
+          <div className="flex flex-col gap-2 mt-4">
+            <a
+              href="/resume.pdf"
+              download
+              className="btn btn-primary btn-sm flex items-center gap-2"
+            >
+              <FaDownload /> Resume
+            </a>
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="btn btn-ghost btn-sm text-xl"
+            >
+              {isDark ? <FaSun /> : <FaMoon />}
+            </button>
+          </div>
         </div>
       )}
     </div>
