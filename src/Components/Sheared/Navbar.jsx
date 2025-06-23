@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  FaBars,
-  FaDownload,
-  FaEnvelope,
-  FaHome,
-  FaInfoCircle,
-  FaMoon,
-  FaSun,
-  FaTimes,
-} from "react-icons/fa";
+import { FaBars, FaDownload, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -66,7 +57,7 @@ const Navbar = () => {
           {isDark ? <FaSun /> : <FaMoon />}
         </button>
         <a
-          href="/resume.pdf"
+          href="/src/assets/sabbir-front-end-developer.pdf"
           download
           className="btn btn-primary btn-sm flex items-center gap-2"
         >
@@ -92,7 +83,7 @@ const Navbar = () => {
           </ul>
           <div className="flex flex-col gap-2 mt-4">
             <a
-              href="/resume.pdf"
+              href="/src/assets/sabbir-front-end-developer.pdf"
               download
               className="btn btn-primary btn-sm flex items-center gap-2"
             >

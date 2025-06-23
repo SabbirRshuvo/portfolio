@@ -1,74 +1,71 @@
-import React from "react";
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 text-base-content px-4 py-10 mt-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Brand Overview */}
+    <footer className="bg-gray-900 text-white py-10 px-4 md:px-16 mt-16">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        {/* Name & Overview */}
         <div>
-          <h2 className="text-xl font-bold">Md Sabbir</h2>
-          <p className="text-sm mt-2">
-            A passionate front-end developer building modern and responsive web
-            interfaces with React and Tailwind CSS.
+          <h3 className="text-xl font-bold mb-2">Md Sabbir</h3>
+          <p className="text-sm text-gray-300">
+            I'm a MERN Stack Web Developer passionate about building
+            user-friendly, scalable and secure web applications.
           </p>
         </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="text-lg font-semibold">Contact</h3>
-          <p className="mt-2 text-sm">Email: sabbir@email.com</p>
-          <p className="text-sm">Phone: +880 1234 567890</p>
-        </div>
-
-        {/* Address */}
-        <div>
-          <h3 className="text-lg font-semibold">Address</h3>
-          <p className="mt-2 text-sm">Rajshahi, Bangladesh</p>
+        {/* Contact Info */}
+        <div className="space-y-2">
+          <h4 className="text-lg font-semibold">Contact</h4>
+          <p className="flex items-center gap-2 text-gray-300">
+            <FaEnvelope className="text-blue-400" /> sabbirhshuvo11@gmail.com
+          </p>
+          <p className="flex items-center gap-2 text-gray-300">
+            <FaPhoneAlt className="text-blue-400" /> +8801734066870
+          </p>
+          <p className="flex items-center gap-2 text-gray-300">
+            <FaMapMarkerAlt className="text-blue-400" /> Rajshahi, Bangladesh
+          </p>
         </div>
 
         {/* Social Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-2">Follow Me</h3>
-          <div className="flex gap-4 text-2xl">
+          <h4 className="text-lg font-semibold mb-2">Follow Me</h4>
+          <div className="flex gap-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/sabbirkhan.sk.944"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-blue-500 hover:text-white"
             >
-              <FaFacebookF className="hover:text-blue-600" />
+              <FaFacebook size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://github.com/SabbirRshuvo"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white"
             >
-              <FaTwitter className="hover:text-sky-500" />
+              <FaGithub size={24} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.linkedin.com/in/sabbir-rahman-shuvo-dev/"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-blue-400 hover:text-white"
             >
-              <FaInstagram className="hover:text-pink-500" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn className="hover:text-blue-700" />
+              <FaLinkedin size={24} />
             </a>
           </div>
         </div>
       </div>
-
-      <div className="text-center text-sm mt-10">
+      <div className="text-center text-gray-500 text-sm mt-10">
         © {new Date().getFullYear()} Md Sabbir. All rights reserved.
       </div>
     </footer>

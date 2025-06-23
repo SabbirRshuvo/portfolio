@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FaDownload,
-  FaEnvelope,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
-import { LiaLinkedin } from "react-icons/lia";
+import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
@@ -42,7 +35,7 @@ const Banner = () => {
 
             <div className="flex gap-4 flex-wrap items-center">
               <a
-                href="/src/assets/Sabbir-MERN-Stack-developer.pdf"
+                href="/src/assets/sabbir-front-end-developer.pdf"
                 download
                 className="btn btn-primary flex items-center gap-2"
               >
