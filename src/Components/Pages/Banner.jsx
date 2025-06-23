@@ -1,6 +1,7 @@
 import React from "react";
 import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import bg from "../../assets/bg.jpg";
 
 const Banner = () => {
   return (
@@ -76,7 +77,7 @@ const Banner = () => {
           {/* Right: Image */}
           <div className="flex justify-center">
             <img
-              src="/src/assets/bg.jpg"
+              src={bg}
               alt="Md Sabbir"
               className="w-60 h-60 md:w-80 md:h-80 object-cover rounded-full shadow-lg border-4 border-primary"
             />
