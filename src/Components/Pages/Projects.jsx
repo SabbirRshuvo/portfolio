@@ -7,6 +7,27 @@ import { useState } from "react";
 
 const projects = [
   {
+    name: "StayNest",
+    image: "https://i.ibb.co/KcJJhmS6/stay-nest.png",
+    live: "https://stay-nest-hotel-booking.web.app/",
+    github: "https://github.com/SabbirRshuvo/StayNest-hotel-booking",
+    overview: `A hotel booking management site. User can book hotels based on location room type and price and stay with guest.`,
+    tech: [
+      "React",
+      "JavaScript",
+      "Context API",
+      "Firebase",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Lottie React",
+      "ImgBB",
+      "Vercel",
+      "Mongoose",
+    ],
+  },
+  {
     name: "MicroTask",
     image: "https://i.ibb.co/4Zb3p0wT/first-projects.png",
     live: "https://micro-task-earning-56ea3.web.app/",
