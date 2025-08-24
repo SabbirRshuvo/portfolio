@@ -11,7 +11,7 @@ const projects = [
     image: "https://i.ibb.co/KcJJhmS6/stay-nest.png",
     live: "https://stay-nest-hotel-booking.web.app/",
     github: "https://github.com/SabbirRshuvo/StayNest-hotel-booking",
-    overview: `A hotel booking management site. User can book hotels based on location room type and price and stay with guest.`,
+    overview: `A hotel booking management site. User can book hotels based on location room type and price and stay with guest. `,
     tech: [
       "React",
       "JavaScript",
@@ -28,8 +28,27 @@ const projects = [
     ],
   },
   {
+    name: "Panto-Furniture",
+    image: "https://i.ibb.co.com/B24dCzKY/panto-furniture.png",
+    live: "https://radiant-kulfi-7f1855.netlify.app/",
+    github: "https://github.com/SabbirRshuvo/panto-furniture-landing-page",
+    overview: `Panto Furniture is a responsive landing page for a furniture store.
+    It features a modern design, product showcases, and anyone can Add to Cart Products.`,
+    tech: [
+      "React",
+      "JavaScript",
+      "Context API",
+      "Tailwind CSS",
+      "Netlify",
+      "SweetAlert2",
+      "Swiper",
+      "React Router",
+      "React Icons",
+    ],
+  },
+  {
     name: "MicroTask",
-    image: "https://i.ibb.co/4Zb3p0wT/first-projects.png",
+    image: "https://i.ibb.co.com/xtg968cq/micro-task-logo.png",
     live: "https://micro-task-earning-56ea3.web.app/",
     github: "https://github.com/SabbirRshuvo/micro-task-earning-client",
     overview: `A micro-tasking platform for buyers and workers.
@@ -49,57 +68,6 @@ Includes dashboard, payment & role-based access.`,
       "ImgBB",
       "Vercel",
     ],
-  },
-  {
-    name: "VolunterManagement",
-    image: "https://i.ibb.co/jZJY7vn9/third-projects.png",
-    live: "https://voluneteer-management.web.app/",
-    github: "https://github.com/SabbirRshuvo/Volunteer-management-client",
-    overview: `A portal to request or join volunteer events.
-Organizers post needs; users can apply.
-Includes personal dashboard & real-time tracking.`,
-    tech: [
-      "React",
-      "Firebase",
-      "TailwindCSS",
-      "React Router",
-      "Context API",
-      "Framer Motion",
-      "Swiper",
-    ],
-  },
-  {
-    name: "Restaurent",
-    image: "https://i.ibb.co/tpTwgGM3/second-projects.png",
-    live: "https://bistro-boss-restaurant-82b3f.web.app/",
-    github: `A modern restaurant management web app.
-Users can order food, and admins manage menu.
-Includes JWT auth, chart-based analytics & payments.
-
-`,
-    overview:
-      "A platform where users can post product issues and get recommendations.",
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "TailwindCSS",
-      "Framer Motion",
-      "React Awesome Reveal",
-      "React Lottie",
-      "Axios",
-    ],
-  },
-  {
-    name: "SportsEquipment",
-    image: "https://i.ibb.co/BbddtFM/fourth-projects.png",
-    live: "https://live-link.com",
-    github: "https://github.com/user/taskmanager",
-    overview: `An e-commerce site for sports gear.
-Users browse, filter, and purchase equipment.
-Includes category filtering & secure access.`,
-    tech: ["React", "Firebase", "TailwindCSS", "SweetAlert", "Framer Motion"],
   },
 ];
 const Projects = () => {

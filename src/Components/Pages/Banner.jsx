@@ -1,7 +1,7 @@
 import React from "react";
 import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-import bg from "../../assets/bg.jpg";
+import bg from "../../assets/bg3.png";
 
 const Banner = () => {
   return (
