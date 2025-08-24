@@ -30,7 +30,7 @@ const projects = [
   {
     name: "Panto-Furniture",
     image: "https://i.ibb.co.com/B24dCzKY/panto-furniture.png",
-    live: "https://radiant-kulfi-7f1855.netlify.app/",
+    live: "https://panto-furniture-landing-page.netlify.app/",
     github: "https://github.com/SabbirRshuvo/panto-furniture-landing-page",
     overview: `Panto Furniture is a responsive landing page for a furniture store.
     It features a modern design, product showcases, and anyone can Add to Cart Products.`,
